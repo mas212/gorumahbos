@@ -50,7 +50,7 @@ def update(request, cat_id):
                 categori.save()
                 return redirect('categories:index')
         except:
-            raise
+           messages.error(request, 'Invalid Input')
 
 def delete(request, cat_id):
     categori        = m.Categories.objects.get(id=cat_id)

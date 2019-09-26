@@ -24,7 +24,7 @@
         <div class="box box-danger">
           <div class="box-header">
             <h3 class="box-title">
-              <a href="#" class="btn btn-warning">
+              <a href="{% url 'location:create' %}" class="btn btn-warning">
                 Create location
               </a>
             </h3>
@@ -36,15 +36,15 @@
                   <th>Action</th>
                 </thead>
                 <tbody>
-                  
+                {% for location in locations %}   
                   <tr>
-                    <td>1</td>
+                    <td>{{ location.name }}</td>
                     <td>
-                      <a href="#" class="btn btn-success">Edit</a>
-                      <a href="#" class="btn btn-danger">Delete</a>
+                      <a href="{% url 'location:edit' location_id=location.id %}" class="btn btn-success">Edit</a>
+                      <a href="{% url 'location:delete' location_id=location.id %}" class="btn btn-danger">Delete</a>
                     </td>
                   </tr>
-                  
+                {% endfor %}
                 </tbody>
             </table>
           </div>

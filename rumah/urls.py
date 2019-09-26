@@ -20,5 +20,6 @@ urlpatterns = [
     path('', include('apps.base.urls', namespace='base')),
     path('office/', include('apps.office.urls', namespace='office')),
     path('office/categories/', include('apps.backoffice.categories.urls', namespace='categories')),
+    path('office/location/', include('apps.backoffice.location.urls', namespace='location')),
     path('admin/', admin.site.urls),
 ]

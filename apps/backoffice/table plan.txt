@@ -1,0 +1,38 @@
+
+data master
+-------------------------
+categories
+--------------------------
+-id
+-name
+
+---------------------------
+location
+--------------------------
+-id
+-name
+
+-------------------------
+listing
+-------------------------
+-id
+-name
+-price
+-description
+-qty
+-note
+-categories_id
+-loction_id
+-photo
+-status
+
+---------------------------
+- bookingMessage
+---------------------------
+- id
+- name
+- phone
+- email
+- wa
+- note
+- listing_id

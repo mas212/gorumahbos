@@ -6,10 +6,10 @@ def index(request):
     contex = {
         'categories' : m.Categories.objects.order_by('created_at')
     }
-    return render(request, 'index.html', contex)
+    return render(request, 'categories/index.html', contex)
 
 def create(request):
-    return render(request, 'create.html')
+    return render(request, 'categories/create.html')
 
 def store(request):
     errors = []
@@ -33,7 +33,7 @@ def edit(request, cat_id):
     contex = {
         'categori' : m.Categories.objects.get(id=cat_id)
     }
-    return render(request, 'edit.html', contex)
+    return render(request, 'ecategories/edit.html', contex)
 
 def update(request, cat_id):
     errors = []

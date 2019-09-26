@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'apps.base',
     'apps.office',
     'apps.backoffice.categories',
+    'apps.backoffice.location',
 ]
 
 MIDDLEWARE = [

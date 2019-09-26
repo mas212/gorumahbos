@@ -18,5 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('', include('apps.base.urls', namespace='base')),
+    path('office/', include('apps.office.urls', namespace='office')),
+    path('office/categories/', include('apps.backoffice.categories.urls', namespace='categories')),
     path('admin/', admin.site.urls),
 ]

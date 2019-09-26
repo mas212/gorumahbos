@@ -1,0 +1,27 @@
+LISTING  --
+-----------------------
+-id  --> int
+-name --> str
+-bedrooms -->
+-bathrooms -->
+-price
+-large
+-description
+------------------------
+contactMessage --
+------------------------
+-id
+-name
+-phone
+-email
+-listingId
+------------------------
+categori   --
+------------------------
+-id
+-name
+-----------------------
+location  --
+-----------------------
+-id
+-name

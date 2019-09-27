@@ -1,19 +1,19 @@
 
 data master
 -------------------------
-categories
+categories --done
 --------------------------
 -id
 -name
 
 ---------------------------
-location
+location -- done
 --------------------------
 -id
 -name
 
 -------------------------
-listing
+listing 
 -------------------------
 -id
 -name

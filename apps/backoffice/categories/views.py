@@ -52,6 +52,7 @@ def update(request, cat_id):
         except:
            messages.error(request, 'Invalid Input')
 
+
 def delete(request, cat_id):
     categori        = m.Categories.objects.get(id=cat_id)
     categori.delete()

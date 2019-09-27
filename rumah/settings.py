@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.office',
     'apps.backoffice.categories',
     'apps.backoffice.location',
+    'apps.backoffice.listing',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +124,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+#setup media folder
+MEDIA_URL = '/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'apps/backoffice/listing/media')

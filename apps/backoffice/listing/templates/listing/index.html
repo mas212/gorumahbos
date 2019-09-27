@@ -1,0 +1,72 @@
+{% extends 'layout/master.html' %}
+{% load static %}
+{% block body %}
+  <!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      Listing
+      <small>Data master</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a href="#">Forms</a></li>
+      <li class="active">Listing</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="box box-danger">
+          <div class="box-header">
+            <h3 class="box-title">
+              <a href="{% url 'listing:create' %}" class="btn btn-warning">
+                Create listing
+              </a>
+            </h3>
+          </div>
+          <div class="box-body">
+            <table class="table">
+                <thead>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>qty</th>
+                  <th>Photo</th>
+                  <th>Action</th>
+                </thead>
+                <tbody>
+                  {% for listing in listings %}
+                  <tr>
+                    <td>{{ listing.name }}</td>
+                    <td>{{ listing.price }}</td>
+                    <td>{{ listing.qtyRoom }}</td>
+                    <td>
+                      <img src="{{ listing.get_photo }}" alt="img" style="width: 90px; height:90px;">
+                    </td>
+                    <td>
+                      <a href="#" class="btn btn-success">Edit</a>
+                      <a href="{% url 'listing:delete' listing_id=listing.id %}" class="btn btn-danger">Delete</a>
+                    </td>
+                  </tr>
+                 {% endfor %}
+                </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+
+      </div>
+      <!-- /.col (right) -->
+    </div>
+    <!-- /.row -->
+
+  </section>
+  <!-- /.content -->
+</div>
+  <!-- /.box-body -->
+{% endblock %}

@@ -31,7 +31,7 @@
               </h3>
             </div>-->
             <div class="box-body">
-              {% include 'error.html' %}
+              {% include 'categories/error.html' %}
              <form action="{% url 'categories:store' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-group">

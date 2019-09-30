@@ -33,7 +33,7 @@ def edit(request, cat_id):
     contex = {
         'categori' : m.Categories.objects.get(id=cat_id)
     }
-    return render(request, 'ecategories/edit.html', contex)
+    return render(request, 'categories/edit.html', contex)
 
 def update(request, cat_id):
     errors = []

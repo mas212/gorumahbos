@@ -8,6 +8,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('create', views.create, name='create'),
     path('store', views.store, name='store'),
+    path('edit/<int:listing_id>', views.edit, name='edit'),
+    path('update/<int:listing_id>', views.update, name='update'),
     path('delete/<int:listing_id>',views.delete, name='delete'),
 ]
 if settings.DEBUG:

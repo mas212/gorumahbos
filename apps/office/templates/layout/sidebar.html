@@ -47,11 +47,11 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{% url 'categories:index' %}"><i class="fa fa-circle-o"></i>Categories</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Location</a></li>
+            <li><a href="{% url 'location:index' %}"><i class="fa fa-circle-o"></i> Location</a></li>
           </ul>
         </li>
         <li>
-          <a href="#">
+          <a href="{% url 'listing:index' %}">
             <i class="fa fa-th"></i> <span>Listing</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">new</small>

@@ -51,6 +51,16 @@
                   </div>
                 </div> 
                 <div class="form-group">
+                  <label>Categories:</label>
+                  <div class="col-md-12 input-group">
+                     <select name="location" class="form-control">
+                     {% for location in locations %}
+                        <option value="{{ location.id }}">{{ location.name }}</option>
+                     {% endfor %}
+                    </select>
+                  </div>
+                </div> 
+                <div class="form-group">
                     <label>price:</label>
                     <div class="col-md-12 input-group">
                       <input type="text" class="form-control" name="price">

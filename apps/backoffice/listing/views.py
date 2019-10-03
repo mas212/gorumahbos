@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from . import models as m
 from apps.backoffice.categories.models import Categories
+from apps.backoffice.location.models import Location
 from django.contrib import messages
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
@@ -17,7 +18,8 @@ def index(request):
 
 def create(request):
     contex = {
-        'categories' : m.Categories.objects.all()
+        'categories'    : m.Categories.objects.all(),
+        'locations'     : m.Location.objects.all()
     }
     return render(request, 'listing/create.html', contex)
 
@@ -34,11 +36,13 @@ def store(request):
             description         = request.POST['description']
             qtyRoom             = request.POST['qtyRoom']
             category            = request.POST['category']
+            location            = request.POST['location']
 
             listing                 = m.Listing()
             listing.name            = name
             listing.price           = price
             listing.category_id     = int(category)
+            listing.location_id     = int(location)
             listing.description     = description
             listing.qtyRoom         = qtyRoom
             listing.photo           = filename

@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings 
 from apps.backoffice.categories.models import Categories
+from apps.backoffice.location.models import Location
 # Create your models here.
 class Listing(models.Model):
     name        = models.CharField(max_length=120)
@@ -12,6 +13,9 @@ class Listing(models.Model):
     updated_at  = models.DateTimeField(auto_now=True)
     category    = models.ForeignKey(Categories,
                 related_name='listing_categories',
+                on_delete=models.CASCADE)
+    location    = models.ForeignKey(Location,
+                related_name='listing_location', 
                 on_delete=models.CASCADE)
     @property
     def get_photo(self):
